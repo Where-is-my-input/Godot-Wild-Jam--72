@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccojf40i0ylql"]
 
-[ext_resource type="Texture2D" uid="uid://btb5oijmjdkq2" path="res://assets/img/wild_jam/72-All-Cards.png" id="1_1swfg"]
-[ext_resource type="Texture2D" uid="uid://bjflete4kluk4" path="res://assets/img/wild_jam/72-light-n-dark.png" id="2_jycie"]
+[ext_resource type="Texture2D" uid="uid://btb5oijmjdkq2" path="res://assets/img/wild_jam/72-All-Cards.png" id="1_uvb76"]
+[ext_resource type="Texture2D" uid="uid://bjflete4kluk4" path="res://assets/img/wild_jam/72-light-n-dark.png" id="2_5v2jo"]
 
 [node name="main_)menu" type="Control"]
 layout_mode = 3
@@ -46,7 +46,7 @@ offset_top = 377.0
 offset_right = 2714.0
 offset_bottom = 1581.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_1swfg")
+texture = ExtResource("1_uvb76")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
@@ -55,4 +55,4 @@ offset_top = 453.0
 offset_right = 3275.0
 offset_bottom = 1223.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_jycie")
+texture = ExtResource("2_5v2jo")

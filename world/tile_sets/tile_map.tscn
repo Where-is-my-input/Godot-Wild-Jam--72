@@ -1,11 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bakstd6iedbiw"]
+[gd_scene load_steps=4 format=3 uid="uid://cygfgbrucjl1h"]
 
-[ext_resource type="PackedScene" uid="uid://dkie1lxfmvrdq" path="res://characters/player/player.tscn" id="1_rmqhi"]
-[ext_resource type="PackedScene" uid="uid://cygfgbrucjl1h" path="res://world/tile_sets/tile_map.tscn" id="2_jxxi8"]
-[ext_resource type="Texture2D" uid="uid://cjnek6noy1gsd" path="res://assets/img/tile_sets/dungeon_tiles.png" id="3_fll8q"]
+[ext_resource type="Texture2D" uid="uid://cjnek6noy1gsd" path="res://assets/img/tile_sets/dungeon_tiles.png" id="1_qj844"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x2e5f"]
-texture = ExtResource("3_fll8q")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_30l7x"]
+texture = ExtResource("1_qj844")
 2:2/0 = 0
 3:2/0 = 0
 4:2/0 = 0
@@ -272,15 +270,10 @@ texture = ExtResource("3_fll8q")
 4:22/0 = 0
 5:22/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_8wxe3"]
-resource_local_to_scene = true
-sources/0 = SubResource("TileSetAtlasSource_x2e5f")
+[sub_resource type="TileSet" id="TileSet_d4u7k"]
+terrain_set_0/mode = 0
+sources/1 = SubResource("TileSetAtlasSource_30l7x")
 
-[node name="debu2D" type="Node2D"]
-
-[node name="player" parent="." instance=ExtResource("1_rmqhi")]
-position = Vector2(695, 259)
-
-[node name="TileMap" parent="." instance=ExtResource("2_jxxi8")]
-tile_set = SubResource("TileSet_8wxe3")
-layer_0/tile_data = PackedInt32Array(852005, 262144, 4, 917541, 262144, 4, 983077, 262144, 4, 1048613, 262144, 4, 1114148, 262144, 4, 1179683, 262144, 4, 1179682, 262144, 4, 1179681, 262144, 4, 1179680, 262144, 4, 1114144, 262144, 4, 1114145, 262144, 4, 1048610, 262144, 4, 1048611, 262144, 4, 1048612, 262144, 4, 1048614, 262144, 4, 983078, 262144, 4, 852004, 262144, 4, 852003, 262144, 4, 852002, 262144, 4, 917538, 262144, 4, 983074, 262144, 4, 1114146, 262144, 4, 1114147, 262144, 4, 1179684, 262144, 4, 1179685, 262144, 4, 1114149, 262144, 4, 983076, 262144, 4, 917540, 262144, 4, 917539, 262144, 4, 852001, 262144, 4, 852000, 262144, 4, 851999, 262144, 4, 917535, 262144, 4, 983070, 262144, 4, 1048606, 262144, 4, 1114143, 262144, 4, 983075, 262144, 4, 983073, 262144, 4, 983072, 262144, 4, 1048607, 262144, 4, 1048608, 262144, 4, 1048609, 262144, 4)
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_d4u7k")
+format = 2

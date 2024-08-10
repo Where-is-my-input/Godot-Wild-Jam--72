@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://masn73v70qmj"]
+
+[ext_resource type="Script" path="res://characters/player_sidescroller/cb2Platformer.gd" id="1_mjk4a"]
+[ext_resource type="Texture2D" uid="uid://cxi7f0rmsb5xd" path="res://icon.svg" id="1_nalih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rg027"]
+size = Vector2(118, 110)
+
+[node name="player_sidescroller" type="Node2D"]
+
+[node name="cb2Platformer" type="CharacterBody2D" parent="."]
+script = ExtResource("1_mjk4a")
+
+[node name="Sprite2D" type="Sprite2D" parent="cb2Platformer"]
+texture = ExtResource("1_nalih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cb2Platformer"]
+shape = SubResource("RectangleShape2D_rg027")
+
+[node name="Camera2D" type="Camera2D" parent="cb2Platformer"]

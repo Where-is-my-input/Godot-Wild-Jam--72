@@ -17,3 +17,5 @@ texture = ExtResource("1_m4fhi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_ghccc")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

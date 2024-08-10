@@ -275,5 +275,6 @@ terrain_set_0/mode = 0
 sources/1 = SubResource("TileSetAtlasSource_30l7x")
 
 [node name="TileMap" type="TileMap"]
+z_index = -5
 tile_set = SubResource("TileSet_d4u7k")
 format = 2

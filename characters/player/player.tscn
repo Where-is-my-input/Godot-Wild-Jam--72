@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://characters/player/CharacterBody2D.gd" id="1_w41jy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghccc"]
-size = Vector2(114, 116)
+size = Vector2(48, 48)
 
 [node name="player" type="Node2D"]
 
@@ -13,6 +13,7 @@ motion_mode = 1
 script = ExtResource("1_w41jy")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_m4fhi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]

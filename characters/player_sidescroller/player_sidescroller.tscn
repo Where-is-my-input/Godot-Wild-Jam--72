@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cxi7f0rmsb5xd" path="res://icon.svg" id="1_nalih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rg027"]
-size = Vector2(118, 110)
+size = Vector2(34, 70)
 
 [node name="player_sidescroller" type="Node2D"]
 
@@ -12,9 +12,11 @@ size = Vector2(118, 110)
 script = ExtResource("1_mjk4a")
 
 [node name="Sprite2D" type="Sprite2D" parent="cb2Platformer"]
+scale = Vector2(0.390625, 0.6875)
 texture = ExtResource("1_nalih")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cb2Platformer"]
+position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_rg027")
 
 [node name="Camera2D" type="Camera2D" parent="cb2Platformer"]

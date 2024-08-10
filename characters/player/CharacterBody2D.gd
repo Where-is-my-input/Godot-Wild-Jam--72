@@ -25,7 +25,7 @@ func _physics_process(delta):
 		#velocity = direction * SPEED
 		position.x += SPEED * direction.x
 		position.y += SPEED * direction.y
-		tmr_movement_cooldown.start(0.3)
+		tmr_movement_cooldown.start(0.15)
 	else:
 		velocity = Vector2(move_toward(velocity.x, 0, SPEED), move_toward(velocity.y, 0, SPEED))
 

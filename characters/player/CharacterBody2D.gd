@@ -22,11 +22,11 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Vector2(Input.get_axis("topdown_left", "topdown_right"), Input.get_axis("topdown_up", "topdown_down"))
 	if direction && tmr_movement_cooldown.is_stopped():
-		#velocity = direction * SPEED
-		position.x += SPEED * direction.x
-		position.y += SPEED * direction.y
+		velocity = direction * SPEED * 60
+		#position.x += SPEED * direction.x
+		#position.y += SPEED * direction.y
 		tmr_movement_cooldown.start(0.15)
 	else:
-		velocity = Vector2(move_toward(velocity.x, 0, SPEED), move_toward(velocity.y, 0, SPEED))
-
+		#velocity = Vector2(move_toward(velocity.x, 0, SPEED), move_toward(velocity.y, 0, SPEED))
+		velocity = Vector2(0,0)
 	move_and_slide()

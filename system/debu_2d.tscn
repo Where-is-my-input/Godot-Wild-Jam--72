@@ -5,33 +5,26 @@
 
 [node name="debu2D" type="Node2D"]
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 512.0
-offset_bottom = 649.0
-grow_vertical = 2
+[node name="BoxContainer" type="BoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="BoxContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="BoxContainer/SubViewportContainer"]
 handle_input_locally = false
+size = Vector2i(576, 648)
 render_target_update_mode = 4
 
-[node name="debug_platformer" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_relfe")]
+[node name="debug_platformer" parent="BoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_relfe")]
 
-[node name="SubViewportContainer2" type="SubViewportContainer" parent="."]
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 643.0
-offset_top = 1.0
-offset_right = 1155.0
-offset_bottom = 652.0
-grow_horizontal = 0
-grow_vertical = 2
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="BoxContainer"]
+layout_mode = 2
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer2"]
+[node name="SubViewport" type="SubViewport" parent="BoxContainer/SubViewportContainer2"]
 handle_input_locally = false
+size = Vector2i(576, 648)
 render_target_update_mode = 4
 
-[node name="debug_topdown" parent="SubViewportContainer2/SubViewport" instance=ExtResource("2_a7qm5")]
+[node name="debug_topdown" parent="BoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("2_a7qm5")]

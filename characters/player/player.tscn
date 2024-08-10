@@ -19,3 +19,6 @@ texture = ExtResource("1_m4fhi")
 shape = SubResource("RectangleShape2D_ghccc")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="tmrMovementCooldown" type="Timer" parent="CharacterBody2D"]
+one_shot = true

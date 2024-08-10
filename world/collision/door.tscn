@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://egxej4013f83"]
+
+[ext_resource type="Script" path="res://world/collision/door.gd" id="1_ikv84"]
+[ext_resource type="Texture2D" uid="uid://cxi7f0rmsb5xd" path="res://icon.svg" id="1_n45nk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cr8o"]
+size = Vector2(64, 64)
+
+[node name="door" type="Node2D"]
+script = ExtResource("1_ikv84")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_4cr8o")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+modulate = Color(0.946985, 0.596273, 0, 1)
+texture = ExtResource("1_n45nk")

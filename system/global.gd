@@ -1,5 +1,7 @@
 extends Node
 
+enum WORLD { PLATFORMER, TOPDOWN }
+
 signal platformTrigger
 signal topDownTrigger
 

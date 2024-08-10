@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddnfcouxqubim"]
+
+[ext_resource type="Script" path="res://world/interactables/cbBullet.gd" id="1_dob6f"]
+[ext_resource type="Texture2D" uid="uid://cxi7f0rmsb5xd" path="res://icon.svg" id="1_wvkj0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjh5o"]
+size = Vector2(16, 16)
+
+[node name="cbBullet" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_dob6f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.81253, 1.82897e-06, 0.495254, 1)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_wvkj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sjh5o")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1sb4a344me55"]
+[gd_scene load_steps=5 format=3 uid="uid://d1sb4a344me55"]
 
 [ext_resource type="PackedScene" uid="uid://dkie1lxfmvrdq" path="res://characters/player/player.tscn" id="1_eluxm"]
 [ext_resource type="PackedScene" uid="uid://cygfgbrucjl1h" path="res://world/tile_sets/tile_map.tscn" id="2_78tum"]
 [ext_resource type="PackedScene" uid="uid://egxej4013f83" path="res://world/collision/door.tscn" id="3_hsm85"]
+[ext_resource type="PackedScene" uid="uid://i4nfp47faug1" path="res://world/objects/turret.tscn" id="4_pywg3"]
 
 [node name="debug_topdown" type="Node2D"]
 
@@ -13,3 +14,11 @@ layer_0/tile_data = PackedInt32Array(-327688, 262145, 3, -327687, 262145, 3, -32
 
 [node name="door" parent="." instance=ExtResource("3_hsm85")]
 position = Vector2(571, -73)
+
+[node name="turret" parent="." instance=ExtResource("4_pywg3")]
+position = Vector2(147, -234)
+vectorSpeed = Vector2(0, 250)
+
+[node name="turret2" parent="." instance=ExtResource("4_pywg3")]
+position = Vector2(275, 311)
+vectorSpeed = Vector2(0, -250)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://i4nfp47faug1"]
 
 [ext_resource type="Script" path="res://world/objects/turret.gd" id="1_a74ev"]
-[ext_resource type="Texture2D" uid="uid://cxi7f0rmsb5xd" path="res://icon.svg" id="2_f5s7v"]
+[ext_resource type="PackedScene" uid="uid://bo8mvywpmj3bj" path="res://world/color_cell.tscn" id="2_6ybne"]
 
 [node name="turret" type="Node2D"]
 script = ExtResource("1_a74ev")
@@ -10,9 +10,10 @@ script = ExtResource("1_a74ev")
 one_shot = true
 autostart = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.295882, 0.475568, 9.62615e-08, 1)
-scale = Vector2(0.125, 0.125)
-texture = ExtResource("2_f5s7v")
+[node name="colorCell" parent="." instance=ExtResource("2_6ybne")]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [connection signal="timeout" from="tmrSpawn" to="." method="_on_tmr_spawn_timeout"]

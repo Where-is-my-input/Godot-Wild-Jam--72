@@ -1,18 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpq2la0gp2b16"]
+[gd_scene load_steps=4 format=3 uid="uid://bpq2la0gp2b16"]
 
-[ext_resource type="Texture2D" uid="uid://cxi7f0rmsb5xd" path="res://icon.svg" id="1_3mb7d"]
+[ext_resource type="PackedScene" uid="uid://bo8mvywpmj3bj" path="res://world/color_cell.tscn" id="1_8lvpt"]
+[ext_resource type="Script" path="res://world/collision/platform.gd" id="1_h8hef"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7myv1"]
 size = Vector2(64, 16)
 
 [node name="platform" type="Node2D"]
+script = ExtResource("1_h8hef")
 
 [node name="cb2Platform" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cb2Platform"]
 shape = SubResource("RectangleShape2D_7myv1")
 
-[node name="Sprite2D" type="Sprite2D" parent="cb2Platform"]
-modulate = Color(0, 0.62356, 0.384956, 1)
-scale = Vector2(0.5, 0.125)
-texture = ExtResource("1_3mb7d")
+[node name="colorCell" parent="cb2Platform" instance=ExtResource("1_8lvpt")]
+offset_left = -32.0
+offset_top = -8.0
+offset_right = 32.0
+offset_bottom = 8.0

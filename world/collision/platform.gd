@@ -4,12 +4,20 @@ extends Node2D
 
 @export var disabled = false
 @export var color:Global.WORLD_COLOR = Global.WORLD_COLOR.WHITE
+@export var world:Global.WORLD = Global.WORLD.PLATFORMER
 
 func _ready():
-	Global.connect("colorSwap", colorSwapped)
+	match world:
+		Global.WORLD.PLATFORMER:
+			Global.connect("platformColorSwap", colorSwapped)
+		Global.WORLD.TOPDOWN:
+			Global.connect("topdownColorSwap", colorSwapped)
+		_:
+			Global.connect("colorSwap", colorSwapped)
 	collision_shape_2d.disabled = disabled
 	color_cell.currentColor = color
 	color_cell.setCurrentColor()
 
 func colorSwapped():
 	collision_shape_2d.disabled = !collision_shape_2d.disabled
+	color_cell.colorSwap()

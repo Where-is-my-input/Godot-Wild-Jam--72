@@ -1,6 +1,6 @@
 extends Node
 
-enum WORLD { PLATFORMER, TOPDOWN }
+enum WORLD { PLATFORMER, TOPDOWN, NONE }
 enum WORLD_COLOR {WHITE, BLACK}
 
 var color0 = Color.WHITE
@@ -12,6 +12,8 @@ signal platformTrigger
 signal topDownTrigger
 
 signal colorSwap
+signal platformColorSwap
+signal topdownColorSwap
 
 func _input(event):
 	if event.is_action_pressed("reset"):

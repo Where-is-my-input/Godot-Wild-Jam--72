@@ -3,9 +3,9 @@ extends ColorRect
 @export var currentColor:Global.WORLD_COLOR = Global.WORLD_COLOR.WHITE
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	Global.connect("colorSwap", colorSwap)
-	colorSwap()
+#func _ready():
+	#Global.connect("colorSwap", colorSwap)
+	#colorSwap()
 
 func colorSwap():
 	match currentColor:

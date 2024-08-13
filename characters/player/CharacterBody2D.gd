@@ -8,7 +8,6 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var swap = false
 var pos = global_position
 
 func _physics_process(delta):
@@ -24,7 +23,6 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Vector2(Input.get_axis("topdown_left", "topdown_right"), Input.get_axis("topdown_up", "topdown_down"))
 	if direction && tmr_movement_cooldown.is_stopped():
-		#swap = true
 		pos = global_position
 		velocity = direction * SPEED * 60
 		#position.x += SPEED * direction.x
@@ -36,11 +34,10 @@ func _physics_process(delta):
 	#if move_and_slide(): swap = false
 	move_and_slide()
 	
-	if snapped(pos, Vector2(0.1, 0.1)) != snapped(global_position, Vector2(0.1, 0.1)):
-		print(pos, " - ", global_position)
+	if snapped(pos, Vector2(1,1)) != snapped(global_position, Vector2(1,1)):
 		pos = global_position
 		Global.topdownColorSwap.emit()
+		#swap = false
 	
 	#if swap: 
 		#Global.topdownColorSwap.emit()
-		#swap = false

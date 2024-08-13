@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@onready var tmr_jump_buffer = $tmrJumpBuffer
 
 
 func _physics_process(delta):
@@ -14,7 +15,10 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("platformer_up") and is_on_floor():
+	
+	if Input.is_action_just_pressed("platformer_up"): tmr_jump_buffer.start(0.2)
+	
+	if !tmr_jump_buffer.is_stopped() and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		Global.platformColorSwap.emit()
 

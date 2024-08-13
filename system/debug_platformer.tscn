@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5vqsyjpuj3lh"]
+[gd_scene load_steps=8 format=3 uid="uid://b5vqsyjpuj3lh"]
 
 [ext_resource type="PackedScene" uid="uid://masn73v70qmj" path="res://characters/player_sidescroller/player_sidescroller.tscn" id="1_llsjf"]
 [ext_resource type="PackedScene" uid="uid://cygfgbrucjl1h" path="res://world/tile_sets/tile_map.tscn" id="2_6eas1"]
 [ext_resource type="PackedScene" uid="uid://bpq2la0gp2b16" path="res://world/collision/platform.tscn" id="3_cogq0"]
 [ext_resource type="PackedScene" uid="uid://buk2bcdycpne" path="res://world/interactables/button.tscn" id="4_1iv6x"]
+[ext_resource type="PackedScene" uid="uid://vu71afwigby7" path="res://world/interactables/platformer_spikes.tscn" id="5_5a4is"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ay11j"]
 size = Vector2(1120, 20)
@@ -61,3 +62,7 @@ world = 1
 
 [node name="button" parent="." instance=ExtResource("4_1iv6x")]
 position = Vector2(497, 232)
+
+[node name="platformer_spikes" parent="." instance=ExtResource("5_5a4is")]
+position = Vector2(539, 452)
+world = 2

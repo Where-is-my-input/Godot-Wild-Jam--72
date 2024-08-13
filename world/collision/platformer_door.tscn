@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5ip1j6lc6q87"]
+
+[ext_resource type="Script" path="res://world/collision/door.gd" id="1_kgtkb"]
+[ext_resource type="Texture2D" uid="uid://cxi7f0rmsb5xd" path="res://icon.svg" id="2_tvrbh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3i2e"]
+size = Vector2(64, 128)
+
+[node name="platformer_door" type="Node2D"]
+script = ExtResource("1_kgtkb")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_p3i2e")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+modulate = Color(0.960784, 0.4, 0.32549, 1)
+scale = Vector2(0.5, 1)
+texture = ExtResource("2_tvrbh")

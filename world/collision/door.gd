@@ -5,8 +5,14 @@ extends Node2D
 @onready var collision_shape_2d = $CharacterBody2D/CollisionShape2D
 
 func _ready():
-	Global.connect("platformTrigger", trigger)
-	Global.connect("topDownTrigger", trigger)
+	match world:
+		Global.WORLD.PLATFORMER:
+			Global.connect("platformTrigger", trigger)
+		Global.WORLD.TOPDOWN:
+			Global.connect("topDownTrigger", trigger)
+		_:
+			Global.connect("topDownTrigger", trigger)
+			Global.connect("platformTrigger", trigger)
 
 func trigger(value):
 	if triggerValue == value:

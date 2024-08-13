@@ -9,6 +9,7 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var pos = global_position
+var previousPosition = global_position
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -24,15 +25,22 @@ func _physics_process(delta):
 	var direction = Vector2(Input.get_axis("topdown_left", "topdown_right"), Input.get_axis("topdown_up", "topdown_down"))
 	if direction && tmr_movement_cooldown.is_stopped():
 		pos = global_position
-		velocity = direction * SPEED * 60
-		#position.x += SPEED * direction.x
-		#position.y += SPEED * direction.y
+		previousPosition = global_position
+		
+		if direction.x != 0:
+			#velocity.x = direction.x * SPEED * 60
+			position.x += SPEED * direction.x
+		else:
+			#velocity.y = direction.y * SPEED * 60
+			position.y += SPEED * direction.y
 		tmr_movement_cooldown.start(0.15)
 	else:
 		#velocity = Vector2(move_toward(velocity.x, 0, SPEED), move_toward(velocity.y, 0, SPEED))
 		velocity = Vector2(0,0)
 	#if move_and_slide(): swap = false
-	move_and_slide()
+	#if move_and_slide() && direction == Vector2(0,0):
+	if move_and_slide():
+		global_position = previousPosition
 	
 	if snapped(pos, Vector2(1,1)) != snapped(global_position, Vector2(1,1)):
 		pos = global_position

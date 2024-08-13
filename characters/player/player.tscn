@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dj2ik284b8pl0" path="res://assets/img/sprites/solo_yael.png" id="2_v06e5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghccc"]
-size = Vector2(63, 63)
+size = Vector2(60, 60)
 
 [node name="player" type="Node2D"]
 z_index = 5

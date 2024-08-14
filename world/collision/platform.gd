@@ -8,6 +8,7 @@ extends Node2D
 @export var world:Global.WORLD = Global.WORLD.PLATFORMER
 
 var locked = false
+var waitingSwap = false
 
 func _ready():
 	match world:
@@ -23,13 +24,25 @@ func _ready():
 
 func colorSwapped():
 	disabled = !disabled
-	color_cell.colorSwap()
-	if !locked: collision_shape_2d.disabled = disabled
+	if !locked: 
+		#collision_shape_2d.disabled = disabled
+		setCollision()
+		color_cell.colorSwap()
+	else:
+		waitingSwap = true
 
 func _on_area_2d_body_entered(body):
 	if !body.is_in_group("player"): return
 	locked = true
 
 func _on_area_2d_body_exited(body):
-	collision_shape_2d.disabled = disabled
+	if !body.is_in_group("player"): return
+	if locked && waitingSwap: 
+		#collision_shape_2d.disabled = disabled
+		setCollision()
+		color_cell.colorSwap()
+		waitingSwap = false
 	locked = false
+
+func setCollision():
+	collision_shape_2d.set_deferred("disabled", disabled)

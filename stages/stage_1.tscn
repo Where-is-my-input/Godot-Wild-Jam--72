@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmrru5rwfbrnr"]
+[gd_scene load_steps=5 format=3 uid="uid://cmrru5rwfbrnr"]
 
 [ext_resource type="PackedScene" uid="uid://3to8nafqfg22" path="res://stages/stage_0.tscn" id="1_fxucb"]
 [ext_resource type="PackedScene" uid="uid://wap5uy2liijn" path="res://stages/platformer/platformer_stage_1.tscn" id="2_g0hrb"]
 [ext_resource type="PackedScene" uid="uid://dm1l6qvjbp1so" path="res://stages/topdow/topdown_stage_1.tscn" id="3_fmyrm"]
+[ext_resource type="PackedScene" uid="uid://da58cqp4mannw" path="res://system/debugger.tscn" id="4_4kh4c"]
 
 [node name="stage_1" instance=ExtResource("1_fxucb")]
 alignment = 1
 platformer = ExtResource("2_g0hrb")
 topdown = ExtResource("3_fmyrm")
+
+[node name="debugger" parent="." index="2" instance=ExtResource("4_4kh4c")]

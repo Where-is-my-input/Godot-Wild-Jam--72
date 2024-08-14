@@ -12,6 +12,7 @@ var platformerFinished = false
 func _ready():
 	Global.connect("topdownFinished", finished)
 	Global.connect("platformFinished", finished)
+	Global.connect("restart", restart)
 	loadStage()
 
 func loadStage():
@@ -32,6 +33,7 @@ func finished(value):
 
 func restart():
 	deloadStage()
+	await get_tree().create_timer(0.1).timeout
 	loadStage()
 
 func deloadStage():

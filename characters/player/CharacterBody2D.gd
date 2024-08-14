@@ -54,5 +54,5 @@ func _physics_process(delta):
 		Global.topdownColorSwap.emit()
 		#swap = false
 	
-	#if swap: 
-		#Global.topdownColorSwap.emit()
+func die():
+	Global.restart.emit()

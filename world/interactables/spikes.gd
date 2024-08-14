@@ -17,7 +17,7 @@ func _ready():
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):
-		print("Player hit by spikes")
+		body.die()
 
 func swap():
 	collision_shape_2d.disabled = !collision_shape_2d.disabled

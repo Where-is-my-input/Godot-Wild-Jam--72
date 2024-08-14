@@ -11,6 +11,7 @@ var color1 = Color.BLACK
 signal platformTrigger
 signal topDownTrigger
 
+signal restart
 signal colorSwap
 signal platformColorSwap
 signal topdownColorSwap

@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkie1lxfmvrdq"]
+[gd_scene load_steps=5 format=3 uid="uid://dkie1lxfmvrdq"]
 
+[ext_resource type="Script" path="res://characters/player/player.gd" id="1_ii6ns"]
 [ext_resource type="Script" path="res://characters/player/CharacterBody2D.gd" id="1_w41jy"]
 [ext_resource type="Texture2D" uid="uid://dj2ik284b8pl0" path="res://assets/img/sprites/solo_yael.png" id="2_v06e5"]
 
@@ -8,6 +9,7 @@ size = Vector2(60, 60)
 
 [node name="player" type="Node2D"]
 z_index = 5
+script = ExtResource("1_ii6ns")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
 collision_mask = 3
@@ -22,7 +24,7 @@ texture = ExtResource("2_v06e5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_ghccc")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-
 [node name="tmrMovementCooldown" type="Timer" parent="CharacterBody2D"]
 one_shot = true
+
+[node name="camera" type="RemoteTransform2D" parent="CharacterBody2D"]

@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbqfo3mlj12jp"]
+[gd_scene load_steps=4 format=3 uid="uid://dbqfo3mlj12jp"]
 
+[ext_resource type="Script" path="res://stages/stage.gd" id="1_5jg27"]
 [ext_resource type="PackedScene" uid="uid://cygfgbrucjl1h" path="res://world/tile_sets/tile_map.tscn" id="1_gsjpo"]
 [ext_resource type="PackedScene" uid="uid://dkie1lxfmvrdq" path="res://characters/player/player.tscn" id="2_yvi8y"]
 
-[node name="topdown_default" type="Node2D"]
+[node name="topdown_default" type="Node2D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_5jg27")
+player = NodePath("player")
 
 [node name="TileMap" parent="." instance=ExtResource("1_gsjpo")]
 
 [node name="player" parent="." instance=ExtResource("2_yvi8y")]
+
+[node name="Camera2D" type="Camera2D" parent="."]

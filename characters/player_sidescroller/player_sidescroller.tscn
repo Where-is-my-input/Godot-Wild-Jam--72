@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://masn73v70qmj"]
+[gd_scene load_steps=5 format=3 uid="uid://masn73v70qmj"]
 
+[ext_resource type="Script" path="res://characters/player_sidescroller/player_sidescroller.gd" id="1_arbvs"]
 [ext_resource type="Script" path="res://characters/player_sidescroller/cb2Platformer.gd" id="1_mjk4a"]
 [ext_resource type="Texture2D" uid="uid://di3tayvdk3iwm" path="res://assets/img/sprites/solo_alya.png" id="2_q6h3l"]
 
@@ -8,6 +9,7 @@ size = Vector2(21, 53)
 
 [node name="player_sidescroller" type="Node2D"]
 z_index = 5
+script = ExtResource("1_arbvs")
 
 [node name="cb2Platformer" type="CharacterBody2D" parent="." groups=["player"]]
 collision_mask = 3
@@ -22,7 +24,7 @@ texture = ExtResource("2_q6h3l")
 position = Vector2(-0.5, 15.5)
 shape = SubResource("RectangleShape2D_rg027")
 
-[node name="Camera2D" type="Camera2D" parent="cb2Platformer"]
-
 [node name="tmrJumpBuffer" type="Timer" parent="cb2Platformer"]
 one_shot = true
+
+[node name="camera" type="RemoteTransform2D" parent="cb2Platformer"]

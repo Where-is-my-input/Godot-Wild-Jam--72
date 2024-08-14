@@ -14,12 +14,12 @@ position = Vector2(32, 48)
 
 [node name="platform" parent="." index="2" instance=ExtResource("2_x7s8q")]
 position = Vector2(32, 168)
+disabled = true
+color = 1
 world = 1
 
 [node name="platform2" parent="." index="3" instance=ExtResource("2_x7s8q")]
 position = Vector2(32, 104)
-disabled = true
-color = 1
 world = 1
 
 [node name="goal" parent="." index="4" instance=ExtResource("3_nywur")]

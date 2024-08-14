@@ -13,6 +13,7 @@ var previousPosition = global_position
 
 func _ready():
 	Global.connect("topdownFinished", finished)
+	pos = global_position
 
 func finished(value):
 	#set_script(null)

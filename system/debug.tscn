@@ -77,7 +77,19 @@ layout_mode = 2
 [node name="Button17" type="Button" parent="Container/BoxContainer"]
 layout_mode = 2
 
+[node name="ColorPickerButton" type="ColorPickerButton" parent="Container/BoxContainer"]
+layout_mode = 2
+text = "color picker"
+color = Color(1, 1, 1, 1)
+
+[node name="ColorPickerButton2" type="ColorPickerButton" parent="Container/BoxContainer"]
+layout_mode = 2
+text = "color 2"
+color = Color(1, 1, 1, 1)
+
 [connection signal="pressed" from="Container/BoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Container/BoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Container/BoxContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Container/BoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="color_changed" from="Container/BoxContainer/ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]
+[connection signal="color_changed" from="Container/BoxContainer/ColorPickerButton2" to="." method="_on_color_picker_button_2_color_changed"]

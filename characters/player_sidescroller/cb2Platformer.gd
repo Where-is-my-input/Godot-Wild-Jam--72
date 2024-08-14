@@ -26,6 +26,7 @@ func _physics_process(delta):
 	if !tmr_jump_buffer.is_stopped() and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		Global.platformColorSwap.emit()
+		tmr_jump_buffer.stop()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

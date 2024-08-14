@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://di3tayvdk3iwm" path="res://assets/img/sprites/solo_alya.png" id="2_q6h3l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rg027"]
-size = Vector2(34, 70)
+size = Vector2(21, 53)
 
 [node name="player_sidescroller" type="Node2D"]
 z_index = 5
@@ -19,7 +19,7 @@ scale = Vector2(-0.391, 0.425)
 texture = ExtResource("2_q6h3l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cb2Platformer"]
-position = Vector2(0, 7)
+position = Vector2(-0.5, 15.5)
 shape = SubResource("RectangleShape2D_rg027")
 
 [node name="Camera2D" type="Camera2D" parent="cb2Platformer"]

@@ -11,6 +11,13 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var pos = global_position
 var previousPosition = global_position
 
+func _ready():
+	Global.connect("topdownFinished", finished)
+
+func finished(value):
+	#set_script(null)
+	queue_free()
+
 func _physics_process(delta):
 	# Add the gravity.
 	#if not is_on_floor():

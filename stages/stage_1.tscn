@@ -6,7 +6,5 @@
 
 [node name="stage_1" instance=ExtResource("1_fxucb")]
 alignment = 1
-
-[node name="platformer_stage_1" parent="SubViewportContainer/SubViewport" index="0" instance=ExtResource("2_g0hrb")]
-
-[node name="topdown_stage_1" parent="SubViewportContainer2/SubViewport" index="0" instance=ExtResource("3_fmyrm")]
+platformer = ExtResource("2_g0hrb")
+topdown = ExtResource("3_fmyrm")

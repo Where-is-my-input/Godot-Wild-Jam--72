@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://wap5uy2liijn"]
+[gd_scene load_steps=8 format=3 uid="uid://wap5uy2liijn"]
 
 [ext_resource type="PackedScene" uid="uid://cygfgbrucjl1h" path="res://world/tile_sets/tile_map.tscn" id="1_uf04e"]
 [ext_resource type="PackedScene" uid="uid://bpq2la0gp2b16" path="res://world/collision/platform.tscn" id="2_my5ww"]
 [ext_resource type="PackedScene" uid="uid://masn73v70qmj" path="res://characters/player_sidescroller/player_sidescroller.tscn" id="3_umy4n"]
 [ext_resource type="PackedScene" uid="uid://buk2bcdycpne" path="res://world/interactables/button.tscn" id="4_ioqce"]
 [ext_resource type="PackedScene" uid="uid://c5ip1j6lc6q87" path="res://world/collision/platformer_door.tscn" id="5_d2nd5"]
+[ext_resource type="PackedScene" uid="uid://bw3f5427jq44u" path="res://world/interactables/goal.tscn" id="6_2vmco"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tkags"]
 size = Vector2(42, 186)
@@ -93,3 +94,6 @@ position = Vector2(1024, 128)
 [node name="platformer_door" parent="." instance=ExtResource("5_d2nd5")]
 position = Vector2(32, 112)
 world = 1
+
+[node name="goal" parent="." instance=ExtResource("6_2vmco")]
+position = Vector2(-32, 128)

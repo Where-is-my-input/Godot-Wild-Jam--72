@@ -32,6 +32,8 @@ func finished(value):
 		finishStage()
 
 func restart():
+	platformerFinished = false
+	topdownFinished = false
 	deloadStage()
 	await get_tree().create_timer(0.1).timeout
 	loadStage()

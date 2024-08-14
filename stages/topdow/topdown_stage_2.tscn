@@ -18,7 +18,7 @@ position = Vector2(96, -32)
 [node name="blocker2" parent="." index="3" instance=ExtResource("2_ig1bx")]
 position = Vector2(160, -32)
 disabled = true
-color = 1
+color = 0
 
 [node name="goal" parent="." index="4" instance=ExtResource("3_r0e0i")]
 position = Vector2(224, -32)

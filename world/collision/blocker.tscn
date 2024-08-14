@@ -11,6 +11,7 @@ size = Vector2(32, 32)
 
 [node name="blocker" type="Node2D"]
 script = ExtResource("1_8l7v6")
+color = 1
 
 [node name="cb2Platform" type="StaticBody2D" parent="."]
 

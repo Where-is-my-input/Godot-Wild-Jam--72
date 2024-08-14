@@ -47,4 +47,5 @@ func _input(event):
 		restart()
 
 func finishStage():
-	print("StageFinished")
+	Global.currentStage += 1
+	get_tree().change_scene_to_file("res://system/load_screen.tscn")

@@ -6,6 +6,8 @@ enum WORLD_COLOR {WHITE, BLACK}
 var color0 = Color.WHITE
 var color1 = Color.BLACK
 
+var currentStage = 0
+
 #var currentColor = color0
 
 signal platformTrigger
@@ -18,6 +20,9 @@ signal topdownColorSwap
 
 signal platformFinished
 signal topdownFinished
+
+func _ready():
+	RenderingServer.set_default_clear_color(Color.BLACK)
 
 func _input(event):
 	if event.is_action_pressed("reset"):

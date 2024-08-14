@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://32ssjmjvcqjb"]
+
+[ext_resource type="PackedScene" uid="uid://cygfgbrucjl1h" path="res://world/tile_sets/tile_map.tscn" id="1_vfdwl"]
+[ext_resource type="PackedScene" uid="uid://masn73v70qmj" path="res://characters/player_sidescroller/player_sidescroller.tscn" id="2_kwljx"]
+
+[node name="platformer_default" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_vfdwl")]
+
+[node name="player_sidescroller" parent="." instance=ExtResource("2_kwljx")]

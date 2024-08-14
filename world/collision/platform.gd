@@ -32,3 +32,4 @@ func _on_area_2d_body_entered(body):
 
 func _on_area_2d_body_exited(body):
 	collision_shape_2d.disabled = disabled
+	locked = false

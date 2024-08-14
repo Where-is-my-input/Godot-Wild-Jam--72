@@ -17,3 +17,4 @@ func _ready():
 func trigger(value):
 	if triggerValue == value:
 		collision_shape_2d.set_deferred("disabled", !collision_shape_2d.disabled)
+		queue_free()

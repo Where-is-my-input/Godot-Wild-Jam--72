@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://53ycvt4j22pl"]
+
+[ext_resource type="PackedScene" uid="uid://32ssjmjvcqjb" path="res://stages/platformer/platformer_default.tscn" id="1_tc5ku"]
+[ext_resource type="PackedScene" uid="uid://bpq2la0gp2b16" path="res://world/collision/platform.tscn" id="2_bcblj"]
+[ext_resource type="PackedScene" uid="uid://bw3f5427jq44u" path="res://world/interactables/goal.tscn" id="3_4c86n"]
+[ext_resource type="PackedScene" uid="uid://ds3dvds1lilgx" path="res://system/kill_plane.tscn" id="4_tv87s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvvcc"]
+size = Vector2(2688, 20)
+
+[node name="platformer_stage_6" instance=ExtResource("1_tc5ku")]
+position = Vector2(32, 16)
+
+[node name="platform" parent="." index="3" instance=ExtResource("2_bcblj")]
+position = Vector2(0, 56)
+world = 1
+
+[node name="platform2" parent="." index="4" instance=ExtResource("2_bcblj")]
+position = Vector2(192, 56)
+disabled = true
+color = 1
+world = 1
+
+[node name="platform3" parent="." index="5" instance=ExtResource("2_bcblj")]
+position = Vector2(384, 56)
+world = 1
+
+[node name="platform4" parent="." index="6" instance=ExtResource("2_bcblj")]
+position = Vector2(576, 56)
+disabled = true
+color = 1
+world = 1
+
+[node name="platform5" parent="." index="7" instance=ExtResource("2_bcblj")]
+position = Vector2(768, 56)
+world = 1
+
+[node name="platform6" parent="." index="8" instance=ExtResource("2_bcblj")]
+position = Vector2(960, 56)
+disabled = true
+color = 1
+world = 1
+
+[node name="platform7" parent="." index="9" instance=ExtResource("2_bcblj")]
+position = Vector2(1152, 56)
+world = 1
+
+[node name="goal" parent="." index="10" instance=ExtResource("3_4c86n")]
+position = Vector2(1152, 272)
+
+[node name="kill_plane" parent="." index="11" instance=ExtResource("4_tv87s")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kill_plane" index="0"]
+position = Vector2(608, 400)
+shape = SubResource("RectangleShape2D_uvvcc")
+debug_color = Color(0.967674, 0, 0.472757, 0.42)

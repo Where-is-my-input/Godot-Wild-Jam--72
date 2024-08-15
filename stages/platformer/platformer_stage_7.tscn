@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=3 uid="uid://k7tqny26bc7k"]
+
+[ext_resource type="PackedScene" uid="uid://32ssjmjvcqjb" path="res://stages/platformer/platformer_default.tscn" id="1_gg5xy"]
+[ext_resource type="PackedScene" uid="uid://bpq2la0gp2b16" path="res://world/collision/platform.tscn" id="2_km7to"]
+[ext_resource type="PackedScene" uid="uid://buk2bcdycpne" path="res://world/interactables/button.tscn" id="3_iuayy"]
+[ext_resource type="PackedScene" uid="uid://bw3f5427jq44u" path="res://world/interactables/goal.tscn" id="4_vbnfi"]
+[ext_resource type="PackedScene" uid="uid://ds3dvds1lilgx" path="res://system/kill_plane.tscn" id="5_vyuq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqaoh"]
+size = Vector2(3132, 5)
+
+[node name="platformer_stage_7" instance=ExtResource("1_gg5xy")]
+position = Vector2(32, 16)
+
+[node name="player_sidescroller" parent="." index="1"]
+position = Vector2(48, 80)
+
+[node name="platform" parent="." index="3" instance=ExtResource("2_km7to")]
+position = Vector2(0, 56)
+world = 1
+
+[node name="platform16" parent="." index="4" instance=ExtResource("2_km7to")]
+position = Vector2(48, 136)
+world = 1
+
+[node name="platform2" parent="." index="5" instance=ExtResource("2_km7to")]
+position = Vector2(128, -24)
+world = 1
+
+[node name="platform3" parent="." index="6" instance=ExtResource("2_km7to")]
+position = Vector2(-64, -88)
+world = 1
+
+[node name="platform4" parent="." index="7" instance=ExtResource("2_km7to")]
+position = Vector2(64, -152)
+world = 1
+
+[node name="platform5" parent="." index="8" instance=ExtResource("2_km7to")]
+position = Vector2(64, -240)
+disabled = true
+color = 1
+world = 1
+
+[node name="platform6" parent="." index="9" instance=ExtResource("2_km7to")]
+position = Vector2(-128, -264)
+world = 1
+
+[node name="platform7" parent="." index="10" instance=ExtResource("2_km7to")]
+position = Vector2(192, -264)
+world = 1
+
+[node name="platform8" parent="." index="11" instance=ExtResource("2_km7to")]
+position = Vector2(320, -200)
+world = 1
+
+[node name="platform9" parent="." index="12" instance=ExtResource("2_km7to")]
+position = Vector2(448, -136)
+world = 1
+
+[node name="platform10" parent="." index="13" instance=ExtResource("2_km7to")]
+position = Vector2(448, 104)
+world = 1
+
+[node name="platform11" parent="." index="14" instance=ExtResource("2_km7to")]
+position = Vector2(192, 168)
+world = 1
+
+[node name="platform12" parent="." index="15" instance=ExtResource("2_km7to")]
+position = Vector2(-256, -344)
+world = 1
+
+[node name="platform13" parent="." index="16" instance=ExtResource("2_km7to")]
+position = Vector2(-384, -344)
+world = 1
+
+[node name="platform14" parent="." index="17" instance=ExtResource("2_km7to")]
+position = Vector2(-448, -344)
+world = 1
+
+[node name="platform15" parent="." index="18" instance=ExtResource("2_km7to")]
+position = Vector2(-512, -408)
+world = 1
+
+[node name="button" parent="." index="19" instance=ExtResource("3_iuayy")]
+position = Vector2(448, -104)
+
+[node name="button2" parent="." index="20" instance=ExtResource("3_iuayy")]
+position = Vector2(-512, -448)
+triggerValue = 2
+
+[node name="goal" parent="." index="21" instance=ExtResource("4_vbnfi")]
+position = Vector2(-256, -176)
+
+[node name="kill_plane" parent="." index="22" instance=ExtResource("5_vyuq0")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kill_plane" index="0"]
+position = Vector2(66, 261.5)
+shape = SubResource("RectangleShape2D_bqaoh")
+debug_color = Color(0.986547, 0, 0.322462, 0.42)

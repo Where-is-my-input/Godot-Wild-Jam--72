@@ -1,8 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://dolmvxfdamwys"]
+[gd_scene load_steps=7 format=3 uid="uid://dolmvxfdamwys"]
 
 [ext_resource type="PackedScene" uid="uid://32ssjmjvcqjb" path="res://stages/platformer/platformer_default.tscn" id="1_2qoyg"]
 [ext_resource type="PackedScene" uid="uid://bpq2la0gp2b16" path="res://world/collision/platform.tscn" id="2_yi1w3"]
+[ext_resource type="PackedScene" uid="uid://bw3f5427jq44u" path="res://world/interactables/goal.tscn" id="4_1811u"]
+[ext_resource type="PackedScene" uid="uid://c5ip1j6lc6q87" path="res://world/collision/platformer_door.tscn" id="4_o6325"]
+[ext_resource type="PackedScene" uid="uid://ds3dvds1lilgx" path="res://system/kill_plane.tscn" id="5_t4rem"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jk0g"]
+size = Vector2(1664, 48)
 
 [node name="platformer_stage_5" instance=ExtResource("1_2qoyg")]
 
+[node name="player_sidescroller" parent="." index="1"]
+position = Vector2(0, -56)
+
 [node name="platform" parent="." index="3" instance=ExtResource("2_yi1w3")]
+world = 1
+
+[node name="platform2" parent="." index="4" instance=ExtResource("2_yi1w3")]
+position = Vector2(128, 120)
+world = 1
+
+[node name="platform3" parent="." index="5" instance=ExtResource("2_yi1w3")]
+position = Vector2(272, 184)
+world = 1
+
+[node name="goal" parent="." index="6" instance=ExtResource("4_1811u")]
+position = Vector2(480, 160)
+
+[node name="platformer_door" parent="." index="7" instance=ExtResource("4_o6325")]
+position = Vector2(416, 64)
+
+[node name="kill_plane" parent="." index="8" instance=ExtResource("5_t4rem")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kill_plane" index="0"]
+position = Vector2(256, 272)
+shape = SubResource("RectangleShape2D_2jk0g")
+debug_color = Color(0.981284, 0, 0.372403, 0.42)

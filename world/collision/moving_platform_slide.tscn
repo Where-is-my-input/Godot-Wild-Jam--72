@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://5hdflvf1msd2"]
+
+[ext_resource type="PackedScene" uid="uid://cm4adddukjadh" path="res://world/collision/moving_platform.tscn" id="1_sr3lx"]
+
+[sub_resource type="Curve2D" id="Curve2D_jyppw"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0)
+}
+point_count = 2
+
+[node name="moving_platform_slide" instance=ExtResource("1_sr3lx")]
+
+[node name="Path2D" parent="." index="1"]
+curve = SubResource("Curve2D_jyppw")

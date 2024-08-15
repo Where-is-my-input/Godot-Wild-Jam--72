@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dolmvxfdamwys"]
+
+[ext_resource type="PackedScene" uid="uid://32ssjmjvcqjb" path="res://stages/platformer/platformer_default.tscn" id="1_2qoyg"]
+[ext_resource type="PackedScene" uid="uid://bpq2la0gp2b16" path="res://world/collision/platform.tscn" id="2_yi1w3"]
+
+[node name="platformer_stage_5" instance=ExtResource("1_2qoyg")]
+
+[node name="platform" parent="." index="3" instance=ExtResource("2_yi1w3")]

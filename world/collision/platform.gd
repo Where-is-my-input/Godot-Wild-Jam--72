@@ -29,7 +29,7 @@ func colorSwapped():
 		setCollision()
 		color_cell.colorSwap()
 	else:
-		waitingSwap = true
+		waitingSwap = !waitingSwap
 
 func _on_area_2d_body_entered(body):
 	if !body.is_in_group("player"): return

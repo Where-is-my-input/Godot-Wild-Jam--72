@@ -7,8 +7,12 @@ func _ready():
 	await get_tree().create_timer(0.2).timeout
 	match Global.currentStage:
 		0:
-			get_tree().change_scene_to_file("res://stages/stage_1.tscn")
+			get_tree().change_scene_to_file("res://stages/stage_2.tscn")
 		1:
+			get_tree().change_scene_to_file("res://stages/stage_3.tscn")
+		2:
+			get_tree().change_scene_to_file("res://stages/stage_4.tscn")
+		3:
 			get_tree().change_scene_to_file("res://stages/stage_1.tscn")
 		_:
 			get_tree().change_scene_to_file("res://system/debu_2d.tscn")

@@ -26,3 +26,11 @@ func _on_color_picker_button_color_changed(color):
 
 func _on_color_picker_button_2_color_changed(color):
 	Global.color1 = color
+
+
+func _on_button_5_pressed():
+	get_tree().change_scene_to_file("res://stages/stage_3.tscn")
+
+
+func _on_button_6_pressed():
+	get_tree().change_scene_to_file("res://system/load_screen.tscn")

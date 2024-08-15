@@ -43,24 +43,22 @@ position = Vector2(-32, 96)
 [node name="spikes8" parent="." index="11" instance=ExtResource("3_lpdq0")]
 position = Vector2(32, 96)
 
-[node name="spikes9" parent="." index="12" instance=ExtResource("3_lpdq0")]
-position = Vector2(32, 96)
-
-[node name="spikes7" parent="." index="13" instance=ExtResource("3_lpdq0")]
+[node name="spikes7" parent="." index="12" instance=ExtResource("3_lpdq0")]
 position = Vector2(-96, 32)
 
-[node name="spikes4" parent="." index="14" instance=ExtResource("3_lpdq0")]
+[node name="spikes4" parent="." index="13" instance=ExtResource("3_lpdq0")]
 position = Vector2(-32, -32)
 
-[node name="spikes5" parent="." index="15" instance=ExtResource("3_lpdq0")]
+[node name="spikes5" parent="." index="14" instance=ExtResource("3_lpdq0")]
 position = Vector2(32, -32)
 
-[node name="door" parent="." index="16" instance=ExtResource("4_mp76f")]
+[node name="door" parent="." index="15" instance=ExtResource("4_mp76f")]
 position = Vector2(32, 96)
 
-[node name="door2" parent="." index="17" instance=ExtResource("4_mp76f")]
+[node name="door2" parent="." index="16" instance=ExtResource("4_mp76f")]
 position = Vector2(32, 160)
 triggerValue = 2
 
-[node name="goal" parent="." index="18" instance=ExtResource("5_32ecb")]
+[node name="goal" parent="." index="17" instance=ExtResource("5_32ecb")]
 position = Vector2(32, 160)
+world = 1

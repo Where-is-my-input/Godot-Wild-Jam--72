@@ -13,6 +13,18 @@ func _ready():
 		2:
 			get_tree().change_scene_to_file("res://stages/stage_4.tscn")
 		3:
-			get_tree().change_scene_to_file("res://stages/stage_1.tscn")
+			get_tree().change_scene_to_file("res://stages/stage_5.tscn")
+		4:
+			get_tree().change_scene_to_file("res://stages/stage_6.tscn")
+		5:
+			get_tree().change_scene_to_file("res://stages/stage_7.tscn")
+		6:
+			get_tree().change_scene_to_file("res://stages/stage_8.tscn")
+		#7:
+			#get_tree().change_scene_to_file("res://stages/stage_1.tscn")
+		#8:
+			#get_tree().change_scene_to_file("res://stages/stage_1.tscn")
+		#9:
+			#get_tree().change_scene_to_file("res://stages/stage_1.tscn")
 		_:
 			get_tree().change_scene_to_file("res://system/debu_2d.tscn")

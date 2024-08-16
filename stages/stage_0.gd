@@ -16,8 +16,10 @@ func _ready():
 	loadStage()
 
 func loadStage():
-	platformer_subviewport.add_child(platformer.instantiate())
-	topdown_subviewport.add_child(topdown.instantiate())
+	if !platformer_subviewport.get_child_count() > 0:
+		platformer_subviewport.add_child(platformer.instantiate())
+	if !topdown_subviewport.get_child_count() > 0:
+		topdown_subviewport.add_child(topdown.instantiate())
 
 func finished(value):
 	match value:

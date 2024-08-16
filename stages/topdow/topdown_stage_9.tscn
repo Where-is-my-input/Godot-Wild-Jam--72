@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfo1i1ystn7p5"]
+
+[ext_resource type="PackedScene" uid="uid://dbqfo3mlj12jp" path="res://stages/topdow/topdown_default.tscn" id="1_v7lhb"]
+[ext_resource type="PackedScene" uid="uid://bw3f5427jq44u" path="res://world/interactables/goal.tscn" id="2_t8u2j"]
+
+[node name="topdown_stage_9" instance=ExtResource("1_v7lhb")]
+position = Vector2(32, 32)
+
+[node name="goal" parent="." index="3" instance=ExtResource("2_t8u2j")]
+position = Vector2(0, 64)
+world = 1

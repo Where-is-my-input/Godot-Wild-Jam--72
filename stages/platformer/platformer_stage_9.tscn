@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmui6p7opin3"]
+
+[ext_resource type="PackedScene" uid="uid://32ssjmjvcqjb" path="res://stages/platformer/platformer_default.tscn" id="1_b8vfb"]
+[ext_resource type="PackedScene" uid="uid://bw3f5427jq44u" path="res://world/interactables/goal.tscn" id="2_p2ggj"]
+
+[node name="platformer_stage_9" instance=ExtResource("1_b8vfb")]
+position = Vector2(32, 16)
+
+[node name="goal" parent="." index="3" instance=ExtResource("2_p2ggj")]
+position = Vector2(0, 80)

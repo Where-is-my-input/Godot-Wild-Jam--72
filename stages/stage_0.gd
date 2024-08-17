@@ -4,12 +4,14 @@ var topdownFinished = false
 var platformerFinished = false
 @onready var platformer_subviewport = $platformerContainer/platformerSubviewport
 @onready var topdown_subviewport = $topdownContainer/topdownSubviewport
+@onready var label: Label = $Label
 
 @export var platformer:PackedScene
 @export var topdown:PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	label.text = str(Global.currentStage)
 	Global.connect("topdownFinished", finished)
 	Global.connect("platformFinished", finished)
 	Global.connect("restart", restart)
@@ -34,6 +36,7 @@ func finished(value):
 		finishStage()
 
 func restart():
+	Global.deaths += 1
 	platformerFinished = false
 	topdownFinished = false
 	deloadStage()

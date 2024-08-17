@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://c36dsa4ieh8ie"]
+
+[ext_resource type="PackedScene" uid="uid://3to8nafqfg22" path="res://stages/stage_0.tscn" id="1_lmgbn"]
+[ext_resource type="PackedScene" uid="uid://kpoavuqt5nt2" path="res://stages/topdow/topdown_stage_10.tscn" id="2_xb4l1"]
+[ext_resource type="PackedScene" uid="uid://r4524soaobx1" path="res://stages/platformer/platformer_stage_10.tscn" id="3_kus5g"]
+
+[node name="stage_10" instance=ExtResource("1_lmgbn")]
+platformer = ExtResource("2_xb4l1")
+topdown = ExtResource("3_kus5g")

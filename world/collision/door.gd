@@ -3,6 +3,7 @@ extends Node2D
 @export var world:Global.WORLD
 @export var triggerValue = 1
 @onready var collision_shape_2d = $CharacterBody2D/CollisionShape2D
+@onready var audio_unlock: AudioStreamPlayer2D = $audioUnlock
 
 func _ready():
 	match world:
@@ -17,4 +18,7 @@ func _ready():
 func trigger(value):
 	if triggerValue == value:
 		collision_shape_2d.set_deferred("disabled", !collision_shape_2d.disabled)
-		queue_free()
+		audio_unlock.play()
+
+func _on_audio_unlock_finished() -> void:
+	queue_free()

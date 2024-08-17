@@ -15,13 +15,20 @@ layout_mode = 2
 
 [node name="platformerSubviewport" type="SubViewport" parent="platformerContainer"]
 handle_input_locally = false
+audio_listener_enable_2d = true
 size = Vector2i(576, 648)
 render_target_update_mode = 4
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "50"
 
 [node name="topdownContainer" type="SubViewportContainer" parent="."]
 layout_mode = 2
 
 [node name="topdownSubviewport" type="SubViewport" parent="topdownContainer"]
 handle_input_locally = false
+audio_listener_enable_2d = true
 size = Vector2i(576, 648)
 render_target_update_mode = 4

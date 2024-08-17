@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://cswpbgkabsiul"]
+
+[ext_resource type="AudioStream" uid="uid://cbf60r32lwyhh" path="res://assets/sound/music/in_game/beauty_of_chaos.ogg" id="1_v6kr1"]
+[ext_resource type="AudioStream" uid="uid://cybys0xlohb8d" path="res://assets/sound/music/in_game/puzzle-1-a.mp3" id="2_townr"]
+[ext_resource type="AudioStream" uid="uid://dmrppduairvo8" path="res://assets/sound/music/in_game/puzzle-1-b.mp3" id="3_nl43q"]
+[ext_resource type="Script" path="res://system/audio/audio_in_game.gd" id="4_21q6e"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gf8nh"]
+streams_count = 3
+stream_0/stream = ExtResource("1_v6kr1")
+stream_1/stream = ExtResource("2_townr")
+stream_2/stream = ExtResource("3_nl43q")
+
+[node name="audioInGame" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamRandomizer_gf8nh")
+autoplay = true
+bus = &"BGM"
+script = ExtResource("4_21q6e")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

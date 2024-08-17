@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 64.0
 const JUMP_VELOCITY = -400.0
 @onready var tmr_movement_cooldown = $tmrMovementCooldown
+@onready var audio_move: AudioStreamPlayer2D = $audioMove
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -53,6 +54,7 @@ func _physics_process(delta):
 	if snapped(pos, Vector2(1,1)) != snapped(global_position, Vector2(1,1)):
 		pos = global_position
 		Global.topdownColorSwap.emit()
+		audio_move.play()
 		#swap = false
 	
 func die():

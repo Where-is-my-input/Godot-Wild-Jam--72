@@ -6,6 +6,7 @@ extends Node2D
 @export var disabled:bool = false
 
 func _ready():
+	if disabled: setFrame("1")
 	match world:
 		Global.WORLD.PLATFORMER:
 			Global.connect("platformColorSwap", swap)
@@ -24,6 +25,9 @@ func swap():
 	collision_shape_2d.disabled = !collision_shape_2d.disabled
 	match animated_sprite_2d.animation:
 		"0":
-			animated_sprite_2d.animation = "1"
+			setFrame("1")
 		_:
-			animated_sprite_2d.animation = "0"
+			setFrame("0")
+
+func setFrame(value):
+	animated_sprite_2d.animation = value

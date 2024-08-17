@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c33durircvu34"]
+
+[ext_resource type="AudioStream" uid="uid://duyaa4l4q5syr" path="res://assets/sound/music/main_menu/fr4s - 8bit2.mp3" id="1_0ts74"]
+
+[node name="audioMainMenu" type="AudioStreamPlayer"]
+stream = ExtResource("1_0ts74")
+autoplay = true
+bus = &"BGM"

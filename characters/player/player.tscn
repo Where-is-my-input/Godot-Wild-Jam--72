@@ -1,11 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkie1lxfmvrdq"]
+[gd_scene load_steps=9 format=3 uid="uid://dkie1lxfmvrdq"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_ii6ns"]
 [ext_resource type="Script" path="res://characters/player/CharacterBody2D.gd" id="1_w41jy"]
 [ext_resource type="Texture2D" uid="uid://dj2ik284b8pl0" path="res://assets/img/sprites/solo_yael.png" id="2_v06e5"]
+[ext_resource type="AudioStream" uid="uid://dgkokvgww0brx" path="res://assets/sound/platformer_jumping/jump_04.wav" id="4_5l830"]
+[ext_resource type="AudioStream" uid="uid://dnvuth3ab8iwh" path="res://assets/sound/platformer_jumping/jump_05.wav" id="5_t84yd"]
+[ext_resource type="AudioStream" uid="uid://cvd0yfspehkaa" path="res://assets/sound/platformer_jumping/jump_06.wav" id="6_yqxc1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghccc"]
 size = Vector2(60, 60)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xovmj"]
+streams_count = 3
+stream_0/stream = ExtResource("4_5l830")
+stream_1/stream = ExtResource("5_t84yd")
+stream_2/stream = ExtResource("6_yqxc1")
 
 [node name="player" type="Node2D"]
 z_index = 5
@@ -28,3 +37,6 @@ shape = SubResource("RectangleShape2D_ghccc")
 one_shot = true
 
 [node name="camera" type="RemoteTransform2D" parent="CharacterBody2D"]
+
+[node name="audioMove" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
+stream = SubResource("AudioStreamRandomizer_xovmj")

@@ -6,6 +6,9 @@ extends Node2D
 @export var type = 1
 
 func _on_area_2d_body_entered(body):
+	if !body.is_in_group("player"):
+		return
+	print("despawned")
 	match world:
 		Global.WORLD.PLATFORMER:
 			Global.platformTrigger.emit(triggerValue)

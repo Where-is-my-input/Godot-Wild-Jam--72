@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://egxej4013f83"]
+[gd_scene load_steps=5 format=3 uid="uid://egxej4013f83"]
 
 [ext_resource type="Script" path="res://world/collision/door.gd" id="1_ikv84"]
 [ext_resource type="Texture2D" uid="uid://cf07f3mx2acp" path="res://assets/img/sprites/door.png" id="2_j560s"]
+[ext_resource type="AudioStream" uid="uid://burdfrir0c7f2" path="res://assets/sound/Key Jiggle.wav" id="3_qij3g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cr8o"]
 size = Vector2(64, 64)
@@ -18,3 +19,9 @@ texture = ExtResource("2_j560s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_4cr8o")
+
+[node name="audioUnlock" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qij3g")
+volume_db = 10.0
+
+[connection signal="finished" from="audioUnlock" to="." method="_on_audio_unlock_finished"]

@@ -24,7 +24,6 @@ position = Vector2(160, 96)
 [node name="blocker2" parent="." instance=ExtResource("2_1stdx")]
 position = Vector2(96, 224)
 disabled = true
-color = 1
 
 [node name="button" parent="." instance=ExtResource("5_ukmpg")]
 position = Vector2(224, 160)

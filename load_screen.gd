@@ -32,8 +32,8 @@ func _ready():
 			get_tree().change_scene_to_file("res://stages/stage_13.tscn")
 		12:
 			get_tree().change_scene_to_file("res://stages/stage_14.tscn")
-		#13:
-			#get_tree().change_scene_to_file("res://stages/stage_15.tscn")
+		13:
+			get_tree().change_scene_to_file("res://stages/stage_15.tscn")
 		#14:
 			#get_tree().change_scene_to_file("res://stages/stage_16.tscn")
 		_:

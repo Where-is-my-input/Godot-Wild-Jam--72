@@ -13,7 +13,6 @@ script = ExtResource("1_kgtkb")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-modulate = Color(0.960784, 0.4, 0.32549, 1)
 scale = Vector2(0.260163, 0.372093)
 texture = ExtResource("2_cfk6g")
 

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bo8mvywpmj3bj" path="res://world/color_cell.tscn" id="2_cgn2b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sjh5o"]
-size = Vector2(16, 16)
+size = Vector2(0, 0)
 
 [node name="cbBullet" type="Area2D"]
 script = ExtResource("1_dob6f")

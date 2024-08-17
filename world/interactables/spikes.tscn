@@ -28,6 +28,7 @@ animations = [{
 }]
 
 [node name="spikes" type="Node2D"]
+z_index = -2
 script = ExtResource("1_cqwn7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

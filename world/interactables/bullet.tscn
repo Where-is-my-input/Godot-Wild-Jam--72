@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddnfcouxqubim"]
 
 [ext_resource type="Script" path="res://world/interactables/cbBullet.gd" id="1_dob6f"]
-[ext_resource type="PackedScene" uid="uid://bo8mvywpmj3bj" path="res://world/color_cell.tscn" id="2_cgn2b"]
+[ext_resource type="Texture2D" uid="uid://c5x0awan2ae28" path="res://assets/img/sprites/new_bullet.png" id="2_sbx50"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sjh5o"]
 size = Vector2(0, 0)
@@ -12,16 +12,14 @@ script = ExtResource("1_dob6f")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_sjh5o")
 
-[node name="colorCell" parent="." instance=ExtResource("2_cgn2b")]
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
 autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.340426, 0.340426)
+texture = ExtResource("2_sbx50")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

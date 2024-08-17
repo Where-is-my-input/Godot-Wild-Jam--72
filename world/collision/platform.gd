@@ -47,6 +47,5 @@ func _on_area_2d_body_exited(body):
 func setCollision():
 	collision_shape_2d.set_deferred("disabled", disabled)
 
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if !disabled: area.queue_free()

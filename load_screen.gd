@@ -29,5 +29,4 @@ func _ready():
 		10:
 			get_tree().change_scene_to_file("res://stages/stage_12.tscn")
 		_:
-			Global.currentStage = 0
-			get_tree().change_scene_to_file("res://stages/stage_2.tscn")
+			get_tree().change_scene_to_file("res://UI/game_over.tscn")

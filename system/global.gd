@@ -63,6 +63,15 @@ var minutes: int = 0
 var seconds: int = 0
 var msec: int = 0
 
+func newGame():
+	deaths = 0
+	currentStage = 0
+	time = 0
+	hours = 0
+	minutes = 0
+	seconds = 0
+	msec = 0
+
 func _process(delta):
 	time += delta
 	msec = fmod(time, 1) * 100

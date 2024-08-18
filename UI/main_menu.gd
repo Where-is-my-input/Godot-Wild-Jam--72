@@ -19,8 +19,7 @@ func _ready() -> void:
 	color_1.visible = Global.gameCleared
 
 func _on_button_pressed() -> void:
-	Global.currentStage = 0
-	Global.deaths = 0
+	Global.newGame()
 	Global.setBGM()
 	get_tree().change_scene_to_file("res://system/load_screen.tscn")
 

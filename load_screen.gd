@@ -37,16 +37,16 @@ func _ready():
 		14:
 			get_tree().change_scene_to_file("res://stages/stage_16.tscn")
 		15:
-			get_tree().change_scene_to_file("res://stages/stage_16.tscn")
-		16:
-			get_tree().change_scene_to_file("res://stages/stage_16.tscn")
-		17:
-			get_tree().change_scene_to_file("res://stages/stage_16.tscn")
-		18:
-			get_tree().change_scene_to_file("res://stages/stage_16.tscn")
-		19:
-			get_tree().change_scene_to_file("res://stages/stage_16.tscn")
-		20:
-			get_tree().change_scene_to_file("res://stages/stage_16.tscn")
+			get_tree().change_scene_to_file("res://stages/stage_17.tscn")
+		#16:
+			#get_tree().change_scene_to_file("res://stages/stage_18.tscn")
+		#17:
+			#get_tree().change_scene_to_file("res://stages/stage_19.tscn")
+		#18:
+			#get_tree().change_scene_to_file("res://stages/stage_20.tscn")
+		#19:
+			#get_tree().change_scene_to_file("res://stages/stage_21.tscn")
+		#20:
+			#get_tree().change_scene_to_file("res://stages/stage_22.tscn")
 		_:
 			get_tree().change_scene_to_file("res://UI/game_over.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bbkklkhajnlxc"]
+[gd_scene load_steps=14 format=3 uid="uid://bbkklkhajnlxc"]
 
 [ext_resource type="PackedScene" uid="uid://32ssjmjvcqjb" path="res://stages/platformer/platformer_default.tscn" id="1_qr43l"]
 [ext_resource type="Texture2D" uid="uid://cjnek6noy1gsd" path="res://assets/img/tile_sets/dungeon_tiles.png" id="2_ev34f"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ds3dvds1lilgx" path="res://system/kill_plane.tscn" id="6_3lisg"]
 [ext_resource type="PackedScene" uid="uid://5hdflvf1msd2" path="res://world/collision/moving_platform_slide.tscn" id="7_wkn58"]
 [ext_resource type="PackedScene" uid="uid://c5ip1j6lc6q87" path="res://world/collision/platformer_door.tscn" id="8_0niok"]
+[ext_resource type="PackedScene" uid="uid://vtn1sdmqbbtg" path="res://world/duck.tscn" id="9_b5u8i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hm7fp"]
 texture = ExtResource("2_ev34f")
@@ -540,5 +541,8 @@ curve = SubResource("Curve2D_y7jed")
 
 [node name="PathFollow2D" parent="moving_platform_slide2/Path2D" index="0"]
 rotates = false
+
+[node name="duck" parent="." index="29" instance=ExtResource("9_b5u8i")]
+position = Vector2(-504, 16)
 
 [editable path="moving_platform_slide2"]

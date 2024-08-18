@@ -23,17 +23,13 @@ grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -276.0
-offset_top = -253.5
-offset_right = 276.0
-offset_bottom = 253.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 79.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -46,11 +42,13 @@ alignment = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Code"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer3/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Ikkisoad"
+horizontal_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer3"]
 layout_mode = 2
@@ -59,11 +57,13 @@ layout_mode = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Art"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer3/VBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Makaai"
+horizontal_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -75,40 +75,45 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
+[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "OpenGameArt Assets:"
+horizontal_alignment = 1
+
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "OpenGameArt"
+theme_override_font_sizes/font_size = 25
+text = "Tileset
+Dungeon tileset - adythewolf"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "OpenGameArt"
+theme_override_font_sizes/font_size = 25
+text = "Music:
+Dark Ambient - ahratmihmet
+Beauty of Chaos - grindhold
+Concentration - JSKNYC
+Puzzle tune 1 - rezoner"
+horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "OpenGameArt"
+theme_override_font_sizes/font_size = 25
+text = "SFX:
+Platformer Jumping Sounds - dklon
+bomb_explosion_8bit - Luke.RUSTLTD
+Key Jiggle - spookymodem"
+horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "OpenGameArt"
-
-[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "OpenGameArt"
-
-[node name="Label6" type="Label" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "OpenGameArt"
-
-[node name="Label7" type="Label" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "OpenGameArt"
+theme_override_font_sizes/font_size = 25
+text = "Sprite:
+TX Bullet - Gumichan01
+Mutant Death - Gobusto"
+horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

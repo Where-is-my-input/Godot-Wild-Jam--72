@@ -4,6 +4,7 @@ extends Node2D
 @export var triggerValue = 1
 @onready var collision_shape_2d = $CharacterBody2D/CollisionShape2D
 @onready var audio_unlock: AudioStreamPlayer2D = $audioUnlock
+@onready var sprite_2d: Sprite2D = $CharacterBody2D/Sprite2D
 
 func _ready():
 	match world:
@@ -17,6 +18,7 @@ func _ready():
 
 func trigger(value):
 	if triggerValue == value:
+		sprite_2d.visible = false
 		collision_shape_2d.set_deferred("disabled", !collision_shape_2d.disabled)
 		audio_unlock.play()
 

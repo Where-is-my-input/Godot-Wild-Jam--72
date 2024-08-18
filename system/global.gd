@@ -36,9 +36,10 @@ func _ready():
 	#setBGM()
 
 func _input(event):
-	if event.is_action_pressed("reset"):
-		get_tree().change_scene_to_file("res://system/debug.tscn")
-	elif event.is_action_pressed("windowMode"):
+	#if event.is_action_pressed("reset"):
+		#get_tree().change_scene_to_file("res://system/debug.tscn")
+	#el
+	if event.is_action_pressed("windowMode"):
 		if DisplayServer.window_get_mode() == 0:
 			DisplayServer.window_set_mode(3)
 		else:

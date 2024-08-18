@@ -15,7 +15,7 @@ script = ExtResource("1_jlxea")
 shape = SubResource("RectangleShape2D_apt87")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-scale = Vector2(0.15625, 0.15625)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_ib32s")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

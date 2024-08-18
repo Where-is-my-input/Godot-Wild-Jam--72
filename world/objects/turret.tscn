@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c5x0awan2ae28" path="res://assets/img/sprites/new_bullet.png" id="4_wqqtc"]
 
 [node name="turret" type="Node2D"]
+z_index = 2
 script = ExtResource("1_a74ev")
 
 [node name="tmrSpawn" type="Timer" parent="."]

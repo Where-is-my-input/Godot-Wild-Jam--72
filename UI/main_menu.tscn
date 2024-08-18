@@ -44,6 +44,7 @@ layout_mode = 2
 text = "Stage Select"
 
 [node name="Button2" type="Button" parent="Container/BoxContainer"]
+visible = false
 layout_mode = 2
 text = "Settings"
 
@@ -107,17 +108,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 alignment = 1
 
 [node name="colorBackground" type="ColorRect" parent="HBoxContainer"]
 z_index = -50
 custom_minimum_size = Vector2(626, 0)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="colorBackground2" type="ColorRect" parent="HBoxContainer"]
 z_index = -50
 custom_minimum_size = Vector2(626, 0)
 layout_mode = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Timer" parent="."]

@@ -6,8 +6,10 @@ enum WORLD_COLOR {WHITE, BLACK}
 var color0 = Color.WHITE
 var color1 = Color.BLACK
 
-var currentStage = 0
+var currentStage:int = 0
 var deaths = 0
+
+var gameCleared = false
 
 #var currentColor = color0
 
@@ -30,6 +32,7 @@ func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	#bgm = AUDIO_MAIN_MENU.instantiate()
 	add_child(AUDIO_MAIN_MENU.instantiate())
+	process_mode = ProcessMode.PROCESS_MODE_ALWAYS
 	#setBGM()
 
 func _input(event):

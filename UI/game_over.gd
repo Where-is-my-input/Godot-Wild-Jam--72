@@ -6,6 +6,7 @@ extends Control
 func _ready() -> void:
 	Global.setBGM(true)
 	lbl_deaths.text = str(Global.deaths)
+	Global.gameCleared = true
 	
 	var time = "%02d:" % Global.hours
 	time += "%02d:" % Global.minutes

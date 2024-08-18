@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkie1lxfmvrdq"]
+[gd_scene load_steps=10 format=3 uid="uid://dkie1lxfmvrdq"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_ii6ns"]
 [ext_resource type="Script" path="res://characters/player/CharacterBody2D.gd" id="1_w41jy"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dgkokvgww0brx" path="res://assets/sound/platformer_jumping/jump_04.wav" id="4_5l830"]
 [ext_resource type="AudioStream" uid="uid://dnvuth3ab8iwh" path="res://assets/sound/platformer_jumping/jump_05.wav" id="5_t84yd"]
 [ext_resource type="AudioStream" uid="uid://cvd0yfspehkaa" path="res://assets/sound/platformer_jumping/jump_06.wav" id="6_yqxc1"]
+[ext_resource type="AudioStream" uid="uid://cb5sgcl4rwq5c" path="res://assets/sound/mutantdie.wav" id="7_a2s2f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghccc"]
 size = Vector2(60, 60)
@@ -40,3 +41,6 @@ one_shot = true
 
 [node name="audioMove" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
 stream = SubResource("AudioStreamRandomizer_xovmj")
+
+[node name="audioDeath" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
+stream = ExtResource("7_a2s2f")

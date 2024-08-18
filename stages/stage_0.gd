@@ -18,10 +18,15 @@ func _ready():
 	loadStage()
 
 func loadStage():
+	get_tree().paused = true
 	if !platformer_subviewport.get_child_count() > 0:
-		platformer_subviewport.add_child(platformer.instantiate())
+		var newPlatformer = platformer.instantiate()
+		#newPlatformer.paused = true
+		platformer_subviewport.add_child(newPlatformer)
 	if !topdown_subviewport.get_child_count() > 0:
 		topdown_subviewport.add_child(topdown.instantiate())
+	await get_tree().create_timer(0.5).timeout
+	get_tree().paused = false
 
 func finished(value):
 	match value:
@@ -39,6 +44,7 @@ func restart():
 	Global.deaths += 1
 	platformerFinished = false
 	topdownFinished = false
+	await get_tree().create_timer(0.1).timeout
 	deloadStage()
 	await get_tree().create_timer(0.1).timeout
 	loadStage()

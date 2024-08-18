@@ -34,3 +34,7 @@ func _on_button_5_pressed():
 
 func _on_button_6_pressed():
 	get_tree().change_scene_to_file("res://system/load_screen.tscn")
+
+
+func _on_button_7_pressed() -> void:
+	get_tree().change_scene_to_file("res://UI/stage_select.tscn")

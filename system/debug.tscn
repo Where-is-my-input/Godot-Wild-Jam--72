@@ -48,6 +48,7 @@ text = "load screen"
 
 [node name="Button7" type="Button" parent="Container/BoxContainer"]
 layout_mode = 2
+text = "Stage select"
 
 [node name="Button8" type="Button" parent="Container/BoxContainer"]
 layout_mode = 2
@@ -95,5 +96,6 @@ color = Color(1, 1, 1, 1)
 [connection signal="pressed" from="Container/BoxContainer/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Container/BoxContainer/Button5" to="." method="_on_button_5_pressed"]
 [connection signal="pressed" from="Container/BoxContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Container/BoxContainer/Button7" to="." method="_on_button_7_pressed"]
 [connection signal="color_changed" from="Container/BoxContainer/ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]
 [connection signal="color_changed" from="Container/BoxContainer/ColorPickerButton2" to="." method="_on_color_picker_button_2_color_changed"]

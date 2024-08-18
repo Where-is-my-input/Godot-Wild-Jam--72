@@ -26,4 +26,15 @@ volume_db = -10.0
 modulate = Color(0.185364, 0.497602, 0.807244, 1)
 texture = ExtResource("4_wqqtc")
 
+[node name="charge" type="TextureProgressBar" parent="."]
+modulate = Color(0.759276, 0.0016738, 0.909636, 1)
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 23.0
+offset_bottom = 23.0
+step = 0.1
+value = 29.0
+fill_mode = 4
+texture_progress = ExtResource("4_wqqtc")
+
 [connection signal="timeout" from="tmrSpawn" to="." method="_on_tmr_spawn_timeout"]

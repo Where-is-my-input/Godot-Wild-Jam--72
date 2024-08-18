@@ -10,6 +10,8 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var tmr_jump_buffer = $tmrJumpBuffer
 
+var facing = 1
+
 func _ready():
 	Global.connect("platformFinished", finished)
 
@@ -36,6 +38,10 @@ func _physics_process(delta):
 	var direction = Input.get_axis("platformer_left", "platformer_right")
 	if direction:
 		velocity.x = direction * SPEED
+		if facing != direction:
+			scale.x *= -1
+			facing = direction
+		#look_at(Vector2(global_position.x + direction, global_position.y))
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 

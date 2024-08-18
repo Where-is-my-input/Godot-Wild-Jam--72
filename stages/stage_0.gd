@@ -5,6 +5,7 @@ var platformerFinished = false
 @onready var platformer_subviewport = $platformerContainer/platformerSubviewport
 @onready var topdown_subviewport = $topdownContainer/topdownSubviewport
 @onready var label: Label = $Label
+@onready var loading: Node2D = $loading
 
 @export var platformer:PackedScene
 @export var topdown:PackedScene
@@ -18,6 +19,7 @@ func _ready():
 	loadStage()
 
 func loadStage():
+	loading.visible = true
 	get_tree().paused = true
 	if !platformer_subviewport.get_child_count() > 0:
 		var newPlatformer = platformer.instantiate()
@@ -27,6 +29,7 @@ func loadStage():
 		topdown_subviewport.add_child(topdown.instantiate())
 	await get_tree().create_timer(0.5).timeout
 	get_tree().paused = false
+	loading.visible = false
 
 func finished(value):
 	match value:

@@ -13,11 +13,21 @@ const BULLET = preload("res://world/interactables/bullet.tscn")
 func _ready():
 	tmr_spawn.start(spawnTimer if firstShotTimer == 0 else firstShotTimer)
 	charge.max_value = spawnTimer
+	#sprite_2d.look_at(global_position + vectorSpeed)
+	#sprite_2d.rotate(-90)
+	if vectorSpeed.x > 0:
+		sprite_2d.set_rotation_degrees(-90)
+	elif vectorSpeed.x < 0:
+		sprite_2d.set_rotation_degrees(90)
+	elif vectorSpeed.y < 0:
+		sprite_2d.set_rotation_degrees(-180)
+		#sprite_2d.rotation_degrees
+	#elif vectorSpeed.y  0:
+		#sprite_2d.rotate(-90)
 
 func _physics_process(delta: float) -> void:
-	sprite_2d.rotate(1)
+	#sprite_2d.rotate(1)
 	charge.value = spawnTimer - tmr_spawn.time_left
-	print(charge.value)
 
 func _on_tmr_spawn_timeout():
 	var newBullet = BULLET.instantiate()

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://i4nfp47faug1"]
+[gd_scene load_steps=6 format=3 uid="uid://i4nfp47faug1"]
 
 [ext_resource type="Script" path="res://world/objects/turret.gd" id="1_a74ev"]
 [ext_resource type="PackedScene" uid="uid://bo8mvywpmj3bj" path="res://world/color_cell.tscn" id="2_6ybne"]
 [ext_resource type="AudioStream" uid="uid://b8uyhi4fxn5tc" path="res://assets/sound/8bit_bomb_explosion.wav" id="3_wsljd"]
+[ext_resource type="Texture2D" uid="uid://df3vviw8bguny" path="res://assets/img/sprites/skull.png" id="4_wp58y"]
 [ext_resource type="Texture2D" uid="uid://c5x0awan2ae28" path="res://assets/img/sprites/new_bullet.png" id="4_wqqtc"]
 
 [node name="turret" type="Node2D"]
@@ -22,10 +23,6 @@ offset_bottom = 8.0
 stream = ExtResource("3_wsljd")
 volume_db = -10.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.185364, 0.497602, 0.807244, 1)
-texture = ExtResource("4_wqqtc")
-
 [node name="charge" type="TextureProgressBar" parent="."]
 modulate = Color(0.759276, 0.0016738, 0.909636, 1)
 offset_left = -24.0
@@ -36,5 +33,10 @@ step = 0.1
 value = 29.0
 fill_mode = 4
 texture_progress = ExtResource("4_wqqtc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.185364, 0.497602, 0.807244, 1)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("4_wp58y")
 
 [connection signal="timeout" from="tmrSpawn" to="." method="_on_tmr_spawn_timeout"]
